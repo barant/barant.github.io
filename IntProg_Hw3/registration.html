@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head><title> Registration </title>
+	<body background="bg2.jpg"></
+<nav>
+	<p align ="center">
+		<a href="registration.html"><strong><font size ="5">Registration</font></strong></a>
+</nav>
+
+<form name ="kayit" method="post" onsubmit="return validateForms()" action="calculator.html">
+        <label for="email"><strong>Email:</strong></label>
+        <input type="email" id="email" name="email"required><br>
+        <label for="password"><strong>Password:</strong></label>
+        <input type="password" id="password" name="password"required><br>
+        <label for="birthday"><strong>Birthday</strong></label>
+        <input type="text" id="birthday" name="birthday"required><br>
+        
+        <label for="namesurname"><strong>Name Surname:</strong></label>
+        <input type="text" id="namesurname" name="namesurname"required>
+    <br> 
+    	<label for="gender"><strong>Gender</strong></label>
+    	<select name="gender"> 
+    		<option value="1">Male</option>
+    		<option value="1">Female</option>
+    	</select>
+    	<br>
+    	<label for="interests"><strong>Interests:</strong></label>
+        <br>
+        <input type="checkbox" name="interest1" value="1">Game<br>
+        <input type="checkbox" name="interest2" value="2">Playing an Enstrument<br>
+        <input type="checkbox" name="interest3" value="3">TV<br>
+        <input type="checkbox" name="interest4" value="4">Music<br>
+        <input type="Submit" value="Submit the form">
+    </form>
+
+
+   
+
+
+    <br><br>
+    <script>
+    function validateForms() {
+    var a = document.forms["kayit"]["email"].value; 
+    var b = document.forms["kayit"]["password"].value; 
+    var c = document.forms["kayit"]["birthday"].value; 
+    var d = document.forms["kayit"]["namesurname"].value; 
+        if (a == "" ||a == null) {
+            alert("E-mail must be filled out");
+            return false;
+        }
+        
+        
+        if (b == "" ||b == null) {
+            alert("Password must be filled out");
+            return false;
+        }
+        
+        if(c == null || c == ""  ){
+            alert("Please enter your birthday!");
+            return false;
+        }
+        if(d == null || d == ""  ){
+            alert("Please enter name and surname!")
+            return false;
+        }
+    } 
